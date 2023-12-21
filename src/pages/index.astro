@@ -3,10 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import heroImage from "../assets/images/programming.svg";
 import Pill from "../components/Pill.astro";
 import Container from "../components/Container.astro";
+import GridSection from "../components/GridSection.astro";
+import { projects } from "../data/projects.ts";
 ---
 
 <Layout title="Home Page">
-  <div class="flex items-center">
+  <section class="flex items-center mt-10">
     <div class="flex-1 flex flex-col gap-4">
       <h1 class="text-7xl mb-5">Hi there! My name is Steven Nguyen</h1>
       <p class="text-lg">
@@ -73,8 +75,12 @@ import Container from "../components/Container.astro";
     <div class="flex-1">
       <img src={heroImage.src} alt="" />
     </div>
-  </div>
+  </section>
   <Container />
-  <Container />
-  <Container />
+  <GridSection title="Recent Projects" data={projects}>
+    {projects.map((project) => <p>{project.title}</p>)}
+  </GridSection>
+  <GridSection title="Coding Challenges">
+    {projects.map((project) => <p>{project.title}</p>)}
+  </GridSection>
 </Layout>

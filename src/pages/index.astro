@@ -6,12 +6,24 @@ import Container from "../components/Container.astro";
 import GridSection from "../components/GridSection.astro";
 import { projects } from "../data/projects.ts";
 import { technologies } from "../data/technology.tsx";
+import HackerText from "../components/HackerText";
 ---
 
+<!-- 
+  gradient colors:
+#C5EFCB, #F5D7E3, #F4A5AE
+#FF99C9, #C1BDDB, #A2C7E5
+-->
 <Layout title="Home Page">
   <section class="flex items-center mt-10">
     <div class="flex-1 flex flex-col gap-4">
-      <h1 class="text-7xl mb-5">Hi there! My name is Steven Nguyen</h1>
+      <h1 class="text-7xl mb-5 font-bold">
+        Hi there! My name is
+        <span
+          class="bg-gradient-to-r from-[#FF99C9] via-[#C1BDDB] to-[#A2C7E5] text-transparent bg-clip-text"
+          ><HackerText target="STEVEN NGUYEN" client:load />
+        </span>
+      </h1>
       <p class="text-lg">
         I am a Software Engineer/Web Developer based in Atlanta, Georgia.
       </p>

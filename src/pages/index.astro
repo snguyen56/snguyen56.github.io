@@ -117,7 +117,7 @@ import HackerText from "../components/HackerText";
       <img src={heroImage.src} alt="A drawing of a programmer at his desk" />
     </div>
   </section>
-  <Container title="Skills">
+  <Container title="Skills" id="skills">
     <div class="grid grid-cols-12 gap-4 bg-primary rounded-xl p-5">
       {
         technologies.map((tech) => (
@@ -128,12 +128,13 @@ import HackerText from "../components/HackerText";
             rel="noopener"
             class="hover:scale-110 transition-all"
           >
-            <img src={tech.icon.src} />
+            <img src={tech.icon.src} alt={tech.alt} />
+            <span class="sr-only">{tech.name}</span>
           </a>
         ))
       }
     </div>
   </Container>
-  <GridSection title="Recent Projects" data={projects} />
-  <GridSection title="Coding Challenges" data={challenges} />
+  <GridSection title="Recent Projects" data={projects} id="projects" />
+  <GridSection title="Coding Challenges" data={challenges} id="challenges" />
 </Layout>

@@ -4,7 +4,7 @@ import weatherImage from "../assets/images/weatherpulse.png";
 
 export const projects = [
   {
-    title: "WeatherPulse",
+    title: "WeatherPulse - Weather Forecast",
     image: weatherImage,
     description:
       "A simple weather forecast app that uses the open source weather API Open-Meteo to gather global forecasting data and present it in a user friendly interface.",

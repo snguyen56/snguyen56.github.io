@@ -2,10 +2,10 @@
 import Container from "./Container.astro";
 import ProjectCard from "./ProjectCard.astro";
 
-const { title, data = [] } = Astro.props;
+const { title, id, data = [] } = Astro.props;
 ---
 
-<Container title={title}>
+<Container title={title} id={id}>
   <div class="grid grid-cols-3 gap-10">
     {data.map((project: any) => <ProjectCard project={project} />)}
   </div>

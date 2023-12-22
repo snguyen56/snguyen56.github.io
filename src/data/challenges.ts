@@ -6,8 +6,8 @@ export const challenges = [
     image: ResultsImage,
     description:
       "This is a solution to the Results summary component challenge on Frontend Mentor.",
-    github_url: "https://github.com/snguyen56/order-summary-component-tailwind",
-    project_url: "https://snguyen56.github.io/WeatherPulse/",
+    github_url: "https://github.com/snguyen56/results-summary-react-tailwind",
+    project_url: "https://snguyen56.github.io/results-summary-react-tailwind/",
   },
   {
     title: "Frontend Mentor - QR code",

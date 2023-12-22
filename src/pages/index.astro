@@ -16,19 +16,21 @@ import HackerText from "../components/HackerText";
 #FF99C9, #C1BDDB, #A2C7E5
 -->
 <Layout title="Steven Nguyen - Software Engineer & Fullstack Web Developer">
-  <section class="flex items-center mt-10 mb-20">
+  <section
+    class="flex flex-col lg:flex-row items-center mt-10 mb-20 text-center lg:text-left gap-20 lg:gap-0"
+  >
     <div class="basis-1/2 flex flex-col gap-5">
-      <h1 class="text-7xl font-bold">
+      <h1 class="text-2xl sm:text-7xl font-bold">
         Hi there! My name is
         <span
           class="bg-gradient-to-r from-[#FF99C9] via-[#C1BDDB] to-[#A2C7E5] text-transparent bg-clip-text"
           ><HackerText target="STEVEN NGUYEN" client:load />
         </span>
       </h1>
-      <p class="text-xl">
+      <p class="md:text-xl">
         I am a Software Engineer/Web Developer based in Atlanta, Georgia.
       </p>
-      <div class="flex gap-4">
+      <div class="hidden md:flex gap-4 justify-center lg:justify-start">
         <Pill>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +87,9 @@ import HackerText from "../components/HackerText";
           <p>Test Engineer</p>
         </Pill>
       </div>
-      <div class="mt-5 flex gap-5">
+      <div
+        class="flex flex-col sm:flex-row mt-5 gap-5 justify-center lg:justify-start"
+      >
         <a
           href="mailto:stevennguyen56@gmail.com"
           class="bg-accent hover:bg-white text-black font-semibold rounded transition-all py-3 px-10"
@@ -94,7 +98,7 @@ import HackerText from "../components/HackerText";
         <a
           href="/Resume_StevenNguyen.pdf"
           download="Resume_StevenNguyen.pdf"
-          class="border-accent border rounded hover:bg-accent hover:text-black transition-all py-3 px-10 flex gap-2 font-semibold"
+          class="border-accent border rounded hover:bg-accent hover:text-black transition-all py-3 px-10 flex gap-2 font-semibold justify-center"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

@@ -6,6 +6,7 @@ import Container from "../components/Container.astro";
 import GridSection from "../components/GridSection.astro";
 import { projects } from "../data/projects.ts";
 import { technologies } from "../data/technology.tsx";
+import { challenges } from "../data/challenges.ts";
 import HackerText from "../components/HackerText";
 ---
 
@@ -107,5 +108,5 @@ import HackerText from "../components/HackerText";
     </div>
   </Container>
   <GridSection title="Recent Projects" data={projects} />
-  <GridSection title="Coding Challenges" />
+  <GridSection title="Coding Challenges" data={challenges} />
 </Layout>

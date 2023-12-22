@@ -6,11 +6,7 @@ const { title, data = [] } = Astro.props;
 ---
 
 <Container title={title}>
-  {
-    data.map((project: any) => (
-      <div class="grid grid-cols-4">
-        <ProjectCard project={project} />
-      </div>
-    ))
-  }
+  <div class="grid grid-cols-3 gap-10">
+    {data.map((project: any) => <ProjectCard project={project} />)}
+  </div>
 </Container>

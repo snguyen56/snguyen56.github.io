@@ -8,24 +8,9 @@ const { title, data = [] } = Astro.props;
 <Container title={title}>
   {
     data.map((project: any) => (
-      <>
-        <div class="grid grid-cols-3">
-          <ProjectCard project={project} />
-        </div>
-
-        <p>{project.title}</p>
-        <p>{project.description}</p>
-        <a
-          href={project.github_url}
-          target="_blank"
-          rel="noreferrer"
-          rel="noopener"
-          class="text-blue-700"
-        >
-          Source Code
-        </a>
-      </>
+      <div class="grid grid-cols-4">
+        <ProjectCard project={project} />
+      </div>
     ))
   }
-  <slot />
 </Container>

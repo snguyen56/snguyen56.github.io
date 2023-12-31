@@ -122,7 +122,9 @@ import HackerText from "../components/HackerText";
     </div>
   </section>
   <Container title="Skills" id="skills">
-    <div class="grid grid-cols-12 gap-4 bg-primary rounded-xl p-5">
+    <div
+      class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 gap-4 bg-primary rounded-xl p-5"
+    >
       {
         technologies.map((tech) => (
           <a
@@ -131,8 +133,9 @@ import HackerText from "../components/HackerText";
             rel="noreferrer"
             rel="noopener"
             class="hover:scale-110 transition-all"
+            class:list={[tech.color]}
           >
-            <img src={tech.icon.src} alt={tech.alt} />
+            <Fragment set:html={tech.icon} />
             <span class="sr-only">{tech.name}</span>
           </a>
         ))

@@ -7,8 +7,18 @@ import C from "../assets/icons/c.svg?raw";
 import express from "../assets/icons/express.svg?raw";
 import mui from "../assets/icons/mui.svg?raw";
 import tailwind from "../assets/icons/tailwindcss.svg?raw";
+import java from "../assets/icons/java.svg?raw";
+import react from "../assets/icons/react.svg?raw";
+import angular from "../assets/icons/angular.svg?raw";
 
 export const technologies = [
+  {
+    name: "java",
+    icon: java,
+    url: "https://www.java.com/",
+    alt: "java logo",
+    color: "hover:fill-[#ED8B00]",
+  },
   {
     name: "python",
     icon: python,
@@ -51,6 +61,28 @@ export const technologies = [
     alt: "CSS logo",
     color: "hover:fill-[#1572B6]",
   },
+
+  {
+    name: "react",
+    icon: react,
+    url: "https://react.dev/",
+    alt: "react logo",
+    color: "hover:fill-[#61DAFB]",
+  },
+  {
+    name: "angular",
+    icon: angular,
+    url: "https://angular.io/",
+    alt: "angular logo",
+    color: "hover:fill-[#DD0031]",
+  },
+  {
+    name: "express",
+    icon: express,
+    url: "https://expressjs.com/",
+    alt: "express logo",
+    color: "hover:fill-[#000000]",
+  },
   {
     name: "mui",
     icon: mui,
@@ -64,12 +96,5 @@ export const technologies = [
     url: "https://tailwindcss.com/",
     alt: "tailwind logo",
     color: "hover:fill-[#06B6D4]",
-  },
-  {
-    name: "express",
-    icon: express,
-    url: "https://expressjs.com/",
-    alt: "express logo",
-    color: "hover:fill-[#000000]",
   },
 ];

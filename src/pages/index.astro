@@ -8,6 +8,7 @@ import { projects } from "../data/projects.ts";
 import { technologies } from "../data/technology.tsx";
 import { challenges } from "../data/challenges.ts";
 import HackerText from "../components/HackerText";
+import ContactSection from "../components/ContactSection.astro";
 ---
 
 <!-- 
@@ -144,4 +145,5 @@ import HackerText from "../components/HackerText";
   </Container>
   <GridSection title="Recent Projects" data={projects} id="projects" />
   <GridSection title="Coding Challenges" data={challenges} id="challenges" />
+  <ContactSection />
 </Layout>

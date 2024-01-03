@@ -2,17 +2,19 @@
 const { project } = Astro.props;
 ---
 
-<div class="bg-primary rounded-lg overflow-hidden">
+<div class="bg-primary rounded-lg overflow-hidden flex flex-col">
   <img src={project.image.src} alt={project.title} />
-  <div class="p-5 flex flex-col gap-5">
-    <h3 class="font-semibold text-2xl">{project.title}</h3>
-    <ul class="flex gap-2 flex-wrap">
-      {
-        project.tags?.map((tag: string) => (
-          <li class="bg-accent rounded-full text-black px-4 py-1">{tag}</li>
-        ))
-      }
-    </ul>
+  <div class="p-5 flex flex-col gap-5 justify-between flex-grow">
+    <div>
+      <h3 class="font-semibold text-2xl mb-5">{project.title}</h3>
+      <ul class="flex gap-2 flex-wrap">
+        {
+          project.tags?.map((tag: string) => (
+            <li class="bg-accent rounded-full text-black px-4 py-1">{tag}</li>
+          ))
+        }
+      </ul>
+    </div>
     <p>{project.description}</p>
     <div class="flex gap-4 text-black mt-2">
       <a

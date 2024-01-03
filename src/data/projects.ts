@@ -7,10 +7,10 @@ export const projects = [
     title: "WeatherPulse - Weather Forecast",
     image: weatherImage,
     description:
-      "A simple weather forecast app that uses the open source weather API Open-Meteo to gather global forecasting data and present it in a user friendly interface.",
+      "A simple weather forecast app that uses an open source weather API to gather global forecasting data and present it in a user friendly interface.",
     github_url: "https://github.com/snguyen56/WeatherPulse",
     project_url: "https://snguyen56.github.io/WeatherPulse/",
-    tags: ["Typescript", "React", "Framer Motion", "Tailwind"],
+    tags: ["Typescript", "React", "Framer Motion"],
   },
   {
     title: "NextJS Recipe Website",

@@ -9,6 +9,7 @@ import { technologies } from "../data/technology.tsx";
 import { challenges } from "../data/challenges.ts";
 import HackerText from "../components/HackerText";
 import ContactSection from "../components/ContactSection.astro";
+import SkillsSection from "../components/SkillsSection.astro";
 ---
 
 <Layout title="Steven Nguyen - Software Engineer & Fullstack Web Developer">
@@ -117,27 +118,7 @@ import ContactSection from "../components/ContactSection.astro";
       <img src={heroImage.src} alt="A drawing of a programmer at his desk" />
     </div>
   </section>
-  <Container title="Skills" id="skills">
-    <div
-      class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-12 gap-4 bg-primary rounded-xl p-5"
-    >
-      {
-        technologies.map((tech) => (
-          <a
-            href={tech.url}
-            target="_blank"
-            rel="noreferrer"
-            rel="noopener"
-            class="hover:scale-110 transition-all"
-            class:list={[tech.color]}
-          >
-            <Fragment set:html={tech.icon} />
-            <span class="sr-only">{tech.name}</span>
-          </a>
-        ))
-      }
-    </div>
-  </Container>
+  <SkillsSection data={technologies} />
   <GridSection title="Recent Projects" data={projects} id="projects" />
   <GridSection title="Coding Challenges" data={challenges} id="challenges" />
   <ContactSection />

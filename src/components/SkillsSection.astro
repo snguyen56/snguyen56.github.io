@@ -1,0 +1,35 @@
+---
+import Container from "./Container.astro";
+
+type tech = {
+  name: string;
+  icon: string;
+  url: string;
+  alt: string;
+  color: string;
+};
+
+const { data } = Astro.props;
+---
+
+<Container title="Skills" id="skills">
+  <div
+    class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-12 gap-4 bg-primary rounded-xl p-5"
+  >
+    {
+      data.map((tech: tech) => (
+        <a
+          href={tech.url}
+          target="_blank"
+          rel="noreferrer"
+          rel="noopener"
+          class="hover:scale-110 transition-all"
+          class:list={[tech.color]}
+        >
+          <Fragment set:html={tech.icon} />
+          <span class="sr-only">{tech.name}</span>
+        </a>
+      ))
+    }
+  </div>
+</Container>
